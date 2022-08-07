@@ -3,6 +3,9 @@ const computerSelection = getComputerChoice();
 let computerScore = 0;
 let playerScore = 0;
 
+const test = document.querySelectorAll('btn-container')
+console.log(test)
+
 function getComputerChoice() {
     let randomNumber = Math.random() * 3;
     if (randomNumber <= 1) {
@@ -28,5 +31,5 @@ function playRound(playerSelection, computerSelection) {
 }
 
 
-console.log(playRound(playerSelection, computerSelection));
+// console.log(playRound(playerSelection, computerSelection));
 
