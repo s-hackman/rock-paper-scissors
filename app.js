@@ -1,25 +1,23 @@
-let playerSelection = "ROCK";
+let playerSelection = "";
 const computerSelection = getComputerChoice();
-let computerScore = 0;
-let playerScore = 0;
+let computerScore = document.getElementById('computer-score');
+let playerScore = document.getElementById('player-score');
 const btnRock = document.getElementById("btn-rock");
 const btnPaper = document.getElementById("btn-paper");
 const btnScissors = document.getElementById("btn-scissors");
+let result = document.querySelector('#result-el')
 
 btnRock.addEventListener('click', function() {
     playerSelection = "ROCK"
-    getComputerChoice()
-    console.log(playRound())
+    result.textContent = playRound(playerSelection, getComputerChoice())
 })
 btnPaper.addEventListener('click', function() {
     playerSelection = "PAPER"
-    getComputerChoice()
-    console.log(playRound())
+    result.textContent = playRound(playerSelection, getComputerChoice())
 })
 btnScissors.addEventListener('click', function() {
     playerSelection = "SCISSORS"
-    getComputerChoice()
-    console.log(playRound())
+    result.textContent = playRound(playerSelection, getComputerChoice())
 })
 console.log(computerScore)
 
