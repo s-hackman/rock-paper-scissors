@@ -25,6 +25,7 @@ body {
     background-color: var(--clr-grey-2);
     text-align: center;
     margin: 0;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 header {
@@ -40,17 +41,14 @@ h1 {
     word-spacing: 1rem;
 }
 
-h2 {
+h2, h3, p {
     color: var(--clr-grey-9);
-}
-
-h3 {
-    color: var(--clr-grey-8);
 }
 
 .score {
     display: flex;
-    justify-content: space-around;
+    justify-content:space-around;
+    padding: 0px 100px 0 100px;
 }
 
 button {
