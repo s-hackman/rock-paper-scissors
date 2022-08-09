@@ -1,23 +1,31 @@
 let playerSelection = "";
 const computerSelection = getComputerChoice();
-let computerScore = document.getElementById('computer-score');
-let playerScore = document.getElementById('player-score');
+let computerScore = 0;
+let playerScore = 0;
+let roundWinner = "";
 const btnRock = document.getElementById("btn-rock");
 const btnPaper = document.getElementById("btn-paper");
 const btnScissors = document.getElementById("btn-scissors");
 let result = document.querySelector('#result-el')
+let result2 = document.getElementById('result-el-2')
+
+let playerScorePara = document.getElementById("player-score")
+let computerScorePara = document.getElementById("computer-score")
 
 btnRock.addEventListener('click', function() {
     playerSelection = "ROCK"
     result.textContent = playRound(playerSelection, getComputerChoice())
+    updateScore()
 })
 btnPaper.addEventListener('click', function() {
     playerSelection = "PAPER"
     result.textContent = playRound(playerSelection, getComputerChoice())
+    updateScore()
 })
 btnScissors.addEventListener('click', function() {
     playerSelection = "SCISSORS"
     result.textContent = playRound(playerSelection, getComputerChoice())
+    updateScore()
 })
 console.log(computerScore)
 
@@ -45,6 +53,17 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-
-console.log(playRound(playerSelection, computerSelection));
+function updateScore() {
+    playerScorePara.textContent = `Player: ${playerScore}`
+    computerScorePara.textContent = `Computer: ${computerScore}`
+    if(playerScore === 5){
+        result2.textContent ='You Win the game'
+        playerScore = 0;
+        computerScore = 0;
+    } else if (computerScore === 5){
+        result2.textContent= 'You Lose the game'
+        computerScore = 0;
+        playerScore = 0;
+    }
+}
 
