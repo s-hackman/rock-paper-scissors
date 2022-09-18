@@ -25,29 +25,65 @@ h1 {
     font-weight: bold;
     color: var(--clr-grey-10);
     word-spacing: 1rem;
+    font-size: 3.5rem;
 }
 
 h2, h3, p {
     color: var(--clr-grey-9);
+    font-size: 1.5rem;
 }
 
 .score {
     display: flex;
-    justify-content:space-around;
-    padding: 0px 100px 0 100px;
+    justify-content: center;
 }
 
-button {
+#player-score, #computer-score {
+    padding: 50px;
+    margin: 10px;
+    font-size: 2rem;
+}
+
+.btn-container button {
     background-color: var(--clr-primary-2);
     border: none;
     border-radius: 5%;
     min-width: 100px;
     min-height: 100px;
-    font-size: 500%;
+    width: 200px;
+    height: 200px;
+    font-size: 800%;
     margin-right: 20px;
 }
 
 button:hover {
+    cursor: pointer;
+    background-color: var(--clr-primary-1);
+}
+
+.win {
+    color: rgb(56, 161, 56);
+}
+
+.lose {
+    color: rgb(196, 61, 61);
+}
+
+.reset-container {
+    padding: 20px;
+    margin: 20px;
+}
+
+#reset {
+    padding: 10px;
+    color: var(--clr-grey-9);
+    background-color: var(--clr-primary-2);
+    border: none;
+    border-radius: 5%;
+    font-size: larger;
+}
+
+#reset:hover {
     cursor: pointer;
     background-color: var(--clr-primary-1);
 }
